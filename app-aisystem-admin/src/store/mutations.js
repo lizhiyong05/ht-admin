@@ -1,0 +1,1 @@
+export const changeTags = (state,arg) => state.tags = arg;

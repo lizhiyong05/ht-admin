@@ -1,0 +1,26 @@
+pipeline {
+     
+
+    agent { node { label 'master' } }
+   
+    stages {    
+        stage('拉取代码'){
+            steps {
+               git branch: 'dev', credentialsId: '92f9e889-37b4-4665-b33d-4753d40e859f', 
+               url: 'http://gitlab.ikh521.com/ht-aiteam/app-aisystem-admin.git'
+            }
+        }
+
+        stage('打包') {
+            steps {
+                    sh 'npm install'
+                    sh 'npm run dev'
+            }
+        }
+        stage('上传文件-发布'){
+            steps {
+                sh 'rsync -iva --delete dist/* --exclude=pipeline root@10.66.254.174:/usr/local/nginx/html/edu'
+            }
+        }
+    }
+}

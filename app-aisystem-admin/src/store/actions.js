@@ -1,0 +1,1 @@
+export const changeTags = ({commit},arg) => commit('changeTags',arg);

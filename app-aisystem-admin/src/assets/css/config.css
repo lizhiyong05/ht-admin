@@ -1,0 +1,163 @@
+.el-pagination{ /* 分页中的样式 */
+    display: inline-block;
+}
+.pagination{ /* 分页中的样式 */
+    font-size: 14px;
+    line-height: 27px;
+    margin-top: 20px;
+}
+.total{ /* 分页中的样式 */
+    font-weight: bold;
+}
+.el-table tbody tr td:last-child span{ /* 表格中操作列的样式 */
+    padding-right: 8px;
+}
+.el-table tbody tr td:last-child .cell{ /* 表格中操作列的样式 */
+    overflow: visible;
+}
+.el-table span{ /* 表格中操作列的样式 */
+    font-size: 14px;
+    color: #409EFF;
+    cursor: pointer;
+}
+.el-select{  /* 下拉框默认宽度修改为200px */
+    width: 200px;
+}
+.upload-file p{ /* 上传图片文案样式 */
+    color: #409EFF;
+    font-size: 16px;
+}
+.button-container{ /* 搜索条件按钮样式 */
+    text-align: center;
+    margin-bottom: 20px;
+}
+.choose .select-dialog{ /* 人员选择插件 */
+    margin: 50px auto 0 auto!important;
+}
+.el-date-editor .el-range-separator{ /* 日期选择 《至》 显示不全 */
+    padding: 0!important;
+}
+.customWidth{  /* 课程管理 弹窗最小宽度设置 */
+    min-width: 800px;
+}
+.width1200{ /* 课程管理 弹窗最小宽度设置 */
+    min-width: 1200px;
+}
+.width900{ /* 课程管理 弹窗最小宽度设置 */
+    min-width: 900px;
+}
+.width1000{ /* 课程管理 弹窗最小宽度设置 */
+    min-width: 1000px;
+}
+.vue-treeselect__control{
+    height: 32px!important;
+}
+.vue-treeselect__placeholder{ /* 默认行高设置 */
+    line-height: 32px!important;
+    color: #ccc!important;
+    font-size: 12px!important;
+}
+.vue-treeselect__single-value{
+    line-height: 32px!important;
+    color: #606266!important;
+    font-size: 12px!important;
+}
+.vue-treeselect__value-container{
+    line-height: 30px;
+}
+.quill-editor img{ /* 富文本样式 */
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+.dialog-footer{
+    text-align: center;
+}
+.el-dialog{ /* 弹窗宽度固定1000px */
+    width: 1000px;
+    color: #333333;
+}
+/* 弹窗中需要头部的css */
+.need-header .el-dialog__header span{
+    border-left: 4px solid #409eff;
+    padding-left: 10px;
+}
+.el-dialog-500 .el-dialog{
+    width: 500px!important;
+}
+.el-dialog__body{
+    color: #333333;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #ccc!important;
+    font-size: 12px!important;
+    font-weight: normal!important;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #ccc!important;
+    font-size: 12px!important;
+    font-weight: normal!important;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #ccc!important;
+    font-size: 12px!important;
+    font-weight: normal!important;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #ccc!important;
+    font-size: 12px!important;
+    font-weight: normal!important;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+.assessment-dialog .el-form-item__label:before, .red-must:before{
+    content: "*";
+    color: #F56C6C;
+    margin-right: 4px;
+}
+.el-message__content{
+    word-break: break-all;
+}
+.messageMaxHeight .el-message__content{
+    max-height: 700px;
+    overflow-y: auto;
+    padding: 10px 0;
+}
+.messageMaxHeight .el-message__content::-webkit-scrollbar{width: 15px;height: 1px;}
+.messageMaxHeight .el-message__content::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);background: #56845D;}
+.messageMaxHeight .el-message__content::-webkit-scrollbar-track{width: 10px;height: 1px;-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);background: #c4e8b2;}
+/* 页面搜索内容样式优化 */
+.search-container .el-form-item{
+    margin-bottom: 10px;
+}
+/* 弹窗中元素上下间距 */
+.el-form-item--small.el-form-item{
+    margin-bottom: 14px;
+}
+/* 表格行间距 */
+.el-table .cell{
+    line-height: 16px;
+}
+/* 搜索条件输入框大小 */
+.search-container .el-input,.search-container .el-select{
+    width: 160px;
+}
+/* 搜索条件树形组件大小 */
+.search-container .vue-treeselect{
+    width: 160px!important;
+    float: left;
+}
+/* 分页与表格的距离 */
+.pagination{
+    margin-top: 10px;
+}
+/* 搜索模块与顶部底部的距离 */
+.search-container{
+     margin: 10px 0;
+ }
+/* 操作表格按钮距离表格的距离 */
+.curriculum-button{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,48 @@
+{
+  "name": "system",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
+    "release": "vue-cli-service build --mode release",
+    "test": "vue-cli-service build --mode test",
+    "gray": "vue-cli-service build --mode gray",
+    "pro": "vue-cli-service build --mode pro",
+    "build": "vue-cli-service build --mode pro",
+    "lint": "vue-cli-service lint",
+    "dev:test": "node server.js"
+  },
+  "dependencies": {
+    "@riophae/vue-treeselect": "0.0.38",
+    "axios": "^0.18.0",
+    "core-js": "^2.6.5",
+    "dagre-d3": "^0.6.3",
+    "element-ui": "^2.10.1",
+    "html2canvas": "^1.0.0-rc.1",
+    "jspdf": "^1.5.3",
+    "moment": "^2.24.0",
+    "nprogress": "^0.2.0",
+    "quill": "^1.3.6",
+    "vue": "^2.6.10",
+    "vue-quill-editor": "^3.0.6",
+    "vue-router": "^3.0.3",
+    "vuedraggable": "^2.21.0",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-eslint": "^3.6.0",
+    "@vue/cli-service": "^3.6.0",
+    "babel-eslint": "^10.0.1",
+    "compression-webpack-plugin": "^3.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "image-webpack-loader": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "sass": "^1.18.0",
+    "sass-loader": "^7.1.0",
+    "vue-cli-plugin-element": "^1.0.1",
+    "vue-template-compiler": "^2.5.21"
+  }
+}
