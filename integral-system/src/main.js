@@ -4,6 +4,14 @@ import router from './router'
 import store from './store'
 import '@/assets/css/common.css'
 
+// 粒子特效
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles);
+// element ui
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+
 Vue.config.productionTip = false
 
 new Vue({

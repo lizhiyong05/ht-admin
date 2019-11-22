@@ -29,6 +29,7 @@ body {
 @media screen{
   body {
     min-width:1280px;
+    min-height: 720px;
   }
 }
 h1,h2,h3,h4{
