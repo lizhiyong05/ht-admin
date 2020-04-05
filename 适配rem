@@ -1,0 +1,21 @@
+安装lib-flexible px2rem-exclude
+npm install lib-flexible px2rem-exclude --save-dev
+
+
+
+main.js
+// 引入 适配px适配 js
+import 'lib-flexible/flexible.js'
+
+
+package.json
+"postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "px2rem-exclude": {
+        "remUnit": 75, // 设计稿尺寸/10
+        "exclude": "node_modules|otherFolder"
+      }
+    }
+  }
+
