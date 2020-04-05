@@ -1,0 +1,27 @@
+adaptaion.scss
+@function pxtorem($px){
+    $rem: 16px;
+    @return ($px/$rem) + rem;
+}
+
+
+
+
+<style lang="scss" scoped>
+h3 {
+  font-size: pxtorem(20px);
+}
+</style>
+
+
+
+vue.config.js
+css: {
+        loaderOptions: {
+            sass: { // 配置全局sass
+                prependData: `
+                    @import "@/assets/css/adaptation.scss";
+                `
+            }
+        }
+    },
