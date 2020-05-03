@@ -1,0 +1,54 @@
+vue.config.js
+
+let cdn = {
+    css: [
+        'https://cdn.jsdelivr.net/npm/vant@2.6.3/lib/index.css'
+    ],
+    js: [
+        'https://cdn.bootcss.com/axios/0.19.2/axios.min.js',
+        'https://cdn.bootcdn.net/ajax/libs/vue-router/3.1.3/vue-router.min.js',
+        'https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.runtime.min.js',
+        'https://cdn.jsdelivr.net/npm/vant@2.6.3/lib/vant.min.js'
+    ]
+}
+chainWebpack: config => {
+      if(CONST_ENV === 'production'){
+          config.plugin('html') // 生产环境注入cdn
+              .tap(args => {
+                  args[0].cdn = cdn;
+                  return args;
+              });
+      }
+  }
+  configureWebpack: config => {
+      if(CONST_ENV === 'production'){ 
+          config.externals = { // 使用cdn方式加载框架
+              'axios': 'axios',
+              'vue-router': 'VueRouter',
+              'vue': 'Vue',
+              'vant': 'vant'
+          };
+      }
+  }
+  
+  
+  index.html
+  
+  <!-- 使用CDN的CSS文件 -->
+<% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.css) { %>
+  <link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="preload" as="style">
+  <link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="stylesheet">
+<% } %>
+<!-- 使用CDN的JS文件 -->
+<% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.js) { %>
+  <link href="<%= htmlWebpackPlugin.options.cdn.js[i] %>" rel="preload" as="script">
+<% } %>
+  
+  
+  
+  
+<% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.js) { %>
+  <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+<% } %>
+  
+  
