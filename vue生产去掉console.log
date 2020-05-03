@@ -1,0 +1,6 @@
+vue.config.js
+configureWebpack: config => {
+  if(CONST_ENV === 'production'){ // 去掉console.log
+    config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true;
+  }
+}
