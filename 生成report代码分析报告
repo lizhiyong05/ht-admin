@@ -1,0 +1,27 @@
+vue.config.js
+let BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;  // 生成分析包
+configureWebpack: config => {
+    if(CONST_ENV === 'production'){
+        let plugins = [];
+        if (process.env.VUE_APP_REPORT) { // npm run port 打开GUI生成分析报告
+            plugins.push(new BundleAnalyzerPlugin());
+        }
+        return {
+            plugins: plugins
+        }
+    }
+}
+
+.env.report 
+NODE_ENV = production
+VUE_APP_REPORT = true
+
+
+package.json
+"build": "vue-cli-service build --mode production"
+
+
+
+
+
+
